@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>syzbot - fixed (static)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xxl fixed-top" style="background-color: #e3f2fd;">
+        <div class="container-fluid"> <a class="navbar-brand" href="#">syzbot</a> <button class="navbar-toggler"
+                type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            System
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Android 5.10</a></li>
+                            <li><a class="dropdown-item" href="#">Android 5.15</a></li>
+                            <li><a class="dropdown-item" href="#">Android 5.4</a></li>
+                            <li><a class="dropdown-item" href="#">Android 6.1</a></li>
+                            <li><a class="dropdown-item" href="#">FreeBSD</a></li>
+                            <li><a class="dropdown-item" href="#">Linux</a></li>
+                            <li><a class="dropdown-item" href="#">Linux 5.15</a></li>
+                            <li><a class="dropdown-item" href="#">Linux 6.1</a></li>
+                            <li><a class="dropdown-item" href="#">OpenBSD</a></li>
+                            <li><a class="dropdown-item" href="#">gVisor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="upstream.html">Open
+                            <span class="badge text-bg-warning">1593</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="subsystems.html">Subsystems</a> </li>
+                    <li class="nav-item"> <a class="nav-link" aria-current="page" href="#">Fixed
+                            <span class="badge text-bg-success">6233</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="invalid.html">Invalid
+                            <span class="badge text-bg-secondary">15777</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="backports.html">Missing Backports
+                            <span class="badge text-bg-secondary">183</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="crashes.html">Crashes</a> </li>
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Graphs
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Kernel Health</a></li>
+                            <li><a class="dropdown-item" href="#">Bugs/Month</a></li>
+                            <li><a class="dropdown-item" href="#">Bug Lifetimes</a></li>
+                            <li><a class="dropdown-item" href="#">Fuzzing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Coverage
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Total</a></li>
+                            <li><a class="dropdown-item" href="#">Repo Heatmap</a></li>
+                            <li><a class="dropdown-item" href="#">Subsystems Heatmap</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Send us Feedback</a> </li>
+                </ul>
+                <span class="navbar-text">
+                    <button type="button" class="btn btn-outline-secondary btn-sm">Sign in</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm">mailing list</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm">source</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm">docs</button>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid text-center" style="padding-top: 5rem;">
+        <!-- Table container and table -->
+        <div class="bg-body-tertiary p-2 mt-5 rounded">
+            <div class="row table-responsive">
+                <div class="col">
+                    <table class="table table-striped table-hover small">
+                        <thead>
+                            <th scope="col">Title</th>
+                            <th scope="col">Repro</th>
+                            <th scope="col">Cause Bisect</th>
+                            <th scope="col">Fix Bisect</th>
+                            <th scope="col">Count</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Reported</th>
+                            <th scope="col">Patched</th>
+                            <th scope="col">Closed</th>
+                            <th scope="col">Patch</th>
+                        </thead>
+                        <tr>
+                            <td scope="col">
+                                KASAN: use-after-free Read in ocfs2_search_dirblock
+                                <span class="btn btn-sm btn-outline-info">
+                                    ocfs2
+                                </span>
+                            </td>
+                            <td scope="col">C</td>
+                            <td scope="col">
+                                <span class="btn btn-sm btn-warning">
+                                    inconclusive	
+                                </span>
+                            </td>
+                            <td scope="col"></td>
+                            <td scope="col">4</td>
+                            <td scope="col">4d03h</td>
+                            <td scope="col">15h14m</td>
+                            <td scope="col">27/28</td>
+                            <td>
+                                <span class="btn btn-sm btn-secondary">
+                                    never
+                                </span>
+                            </td>
+                            <td>
+                                ocfs2: fix directory entry check in ocfs2_search_dirblock()
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                KCSAN: data-race in bprm_execve / copy_fs (4) 
+                                <span class="btn btn-sm btn-outline-success">
+                                    mm
+                                </span>
+                            </td>
+                            <td scope="col"></td>
+                            <td scope="col">
+                                <span class="btn btn-sm btn-success">
+                                    done
+                                </span>
+                            </td>
+                            <td scope="col"></td>
+                            <td scope="col">1</td>
+                            <td scope="col">59d</td>
+                            <td scope="col">59d</td>
+                            <td scope="col">27/28</td>
+                            <td>
+                                <span class="btn btn-sm btn-outline-danger">
+                                    never
+                                </span>
+                            </td>
+                            <td>af7bb0d2ca45 exec: fix the racy usage of fs_struct->in_exec</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                KCSAN: data-race in bprm_execve / copy_fs (4) 
+                                <span class="btn btn-sm btn-outline-success">
+                                    mm
+                                </span>
+                                <span class="btn btn-sm btn-outline-success">
+                                    fs
+                                </span>
+                            </td>
+                            <td scope="col"></td>
+                            <td scope="col">
+                                <span class="btn btn-sm btn-outline-success">
+                                    done
+                                </span>
+                            </td>
+                            <td scope="col"></td>
+                            <td scope="col">1</td>
+                            <td scope="col">59d</td>
+                            <td scope="col">59d</td>
+                            <td scope="col">27/28</td>
+                            <td>
+                                <span class="btn btn-sm btn-outline-danger">
+                                    never
+                                </span>
+                            </td>
+                            <td>af7bb0d2ca45 exec: fix the racy usage of fs_struct->in_exec</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item dropdown">
-                        <button class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             System
                         </button>
                         <ul class="dropdown-menu">
@@ -35,53 +35,51 @@
                             <li><a class="dropdown-item" href="#">gVisor</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Open
-                            <span class="badge text-bg-warning">1593</span>
-                        </a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="subsystems.html">Subsystems</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="fixed.html">Fixed
-                            <span class="badge text-bg-success">6233</span>
-                        </a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="invalid.html">Invalid
-                            <span class="badge text-bg-secondary">15777</span>
-                        </a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="backports.html">Missing Backports
-                            <span class="badge text-bg-secondary">183</span>
-                        </a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="crashes.html">Crashes</a> </li>
                     <li class="nav-item dropdown">
-                        <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Graphs
-                        </button>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Bugs
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Kernel Health</a></li>
+                            <li><a class="dropdown-item" href="#">Open</a></li>
+                            <li><a class="dropdown-item" href="fixed.html">Fixed</a></li>
+                            <li><a class="dropdown-item" href="invalid.html">Invalid</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Kernel Health
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Fixing Progress</a></li>
+                            <li><a class="dropdown-item" href="#">Missing Backports</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"> <a class="nav-link" href="subsystems.html">Subsystems</a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Graphs
+                        </a>
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Bugs/Month</a></li>
                             <li><a class="dropdown-item" href="#">Bug Lifetimes</a></li>
                             <li><a class="dropdown-item" href="#">Fuzzing</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Coverage
-                        </button>
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Total</a></li>
                             <li><a class="dropdown-item" href="#">Repo Heatmap</a></li>
-                            <li><a class="dropdown-item" href="#">Subsystems Heatmap</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Send us Feedback</a> </li>
                 </ul>
                 <span class="navbar-text">
                     <button type="button" class="btn btn-outline-secondary btn-sm">Sign in</button>
-                    <button type="button" class="btn btn-outline-secondary btn-sm">mailing list</button>
+                    <!-- <button type="button" class="btn btn-outline-secondary btn-sm">mailing list</button>
                     <button type="button" class="btn btn-outline-secondary btn-sm">source</button>
-                    <button type="button" class="btn btn-outline-secondary btn-sm">docs</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm">docs</button> -->
                 </span>
             </div>
         </div>
